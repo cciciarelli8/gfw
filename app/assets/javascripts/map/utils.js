@@ -20,51 +20,53 @@ define([
     };
   }
 
-  _.mixin({
-    parseUrl: function() {
-      var e;
-      // Regex for replacing addition symbol with a space
-      var a = /\+/g;
-      var r = /([^&=]+)=?([^&]*)/g;
-      var d = function(s) {
-        return decodeURIComponent(s.replace(a, ' '));
-      };
-      var q = window.location.search.substring(1);
-      var urlParams = {};
+  if (!_.parseUrl || !_.toNumber || !_.extendNonNull) {
+    _.mixin({
+      parseUrl: function() {
+        var e;
+        // Regex for replacing addition symbol with a space
+        var a = /\+/g;
+        var r = /([^&=]+)=?([^&]*)/g;
+        var d = function(s) {
+          return decodeURIComponent(s.replace(a, ' '));
+        };
+        var q = window.location.search.substring(1);
+        var urlParams = {};
 
-      // Parses URL parameters:
-      while ((e = r.exec(q))) {
-        urlParams[d(e[1])] = d(e[2]);
-      }
+        // Parses URL parameters:
+        while ((e = r.exec(q))) {
+          urlParams[d(e[1])] = d(e[2]);
+        }
 
-      return urlParams;
-    },
+        return urlParams;
+      },
 
-    toNumber: function(val) {
-      if ((val === undefined || val === null || String(val).trim() === '')) {
-        return undefined;
-      } else if (isNaN(val)) {
-        return undefined;
-      } else {
-        return Number(val);
-      }
-    },
+      toNumber: function(val) {
+        if ((val === undefined || val === null || String(val).trim() === '')) {
+          return undefined;
+        } else if (isNaN(val)) {
+          return undefined;
+        } else {
+          return Number(val);
+        }
+      },
 
-    extendNonNull: function(obj) {
-      _.each(_.rest(arguments,1), function(source) {
-        if (source) {
-          for (var prop in source) {
-            if( _.isObject(source[prop]) && _.isObject(obj[prop])){
-               obj[prop] = _.extendNonNull(obj[prop], source[prop]);
-            }
-            else if( !_.isNull(source[prop])){
-               obj[prop] = source[prop];
+      extendNonNull: function(obj) {
+        _.each(_.rest(arguments,1), function(source) {
+          if (source) {
+            for (var prop in source) {
+              if( _.isObject(source[prop]) && _.isObject(obj[prop])){
+                 obj[prop] = _.extendNonNull(obj[prop], source[prop]);
+              }
+              else if( !_.isNull(source[prop])){
+                 obj[prop] = source[prop];
+              }
             }
           }
-        }
-      });
-      return obj;
-    }
-  });
+        });
+        return obj;
+      }
+    });
+  }
 
 });

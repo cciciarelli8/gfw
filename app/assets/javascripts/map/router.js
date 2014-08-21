@@ -10,6 +10,7 @@ define([
   'underscore',
   'backbone',
   'mps',
+  'utils',
   'amplify',
   'services/PlaceService',
   'views/LayersNavView',
@@ -22,7 +23,7 @@ define([
   'views/AnalysisToolView',
   'views/AnalysisResultsView',
   'views/ShareView',
-], function($, _, Backbone, mps, amplify, PlaceService, LayersNavView, MapView, LegendView,
+], function($, _, Backbone, mps, utils, amplify, PlaceService, LayersNavView, MapView, LegendView,
     ThresholdView, SearchboxView, MaptypeView, TimelineView, AnalysisToolView, AnalysisResultsView,
     ShareView) {
 
