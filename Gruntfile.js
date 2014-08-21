@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     jasmine: {
       test: {
         options: {
-          specs: '<%= root.test %>/spec/*_spec.js',
+          specs: '<%= root.test %>/spec/router_spec.js',
           host: 'http://127.0.0.1:8000/',
           helpers: '<%= root.test %>/helpers/*.js',
           outfile: '<%= root.test %>/SpecRunner.html',
