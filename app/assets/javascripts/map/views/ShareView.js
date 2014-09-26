@@ -51,8 +51,7 @@ define([
         this._setEmbed();
       }
 
-      $('.share_dialog').find('.help span').empty().append(text);
-      $('.share_dialog').hide().show();
+      $('.share_dialog').css({'height':$('.share_dialog').css('height')+1}).find('.help span').empty().append(text);
     },
 
     _show: function(e) {
