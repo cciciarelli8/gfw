@@ -3,10 +3,13 @@
 //= require gfw
 //= require gfw/helpers
 //= require gfw/ui/circle
+//= require_tree ./search
 
 // Circle
 $(document).ready(function() {
 
+  //SearchBox
+  window.search_index = new gfw.ui.view.SearchIndex();
   // HomeSlider
   Circle = new gfw.ui.view.Circle({ circles: circleSummary });
   $('#homeSlider').append(Circle.render());

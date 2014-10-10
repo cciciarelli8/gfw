@@ -1,6 +1,10 @@
 //= require d3/d3
 //= require jquery.qtip.min
 //= require simple_statistics
+//= require_tree ./search
+
+//SearchBox
+window.search_index = new gfw.ui.view.SearchIndex();
 
 gfw.ui.model.CountriesEmbedOverview = cdb.core.Model.extend({
   defaults: {

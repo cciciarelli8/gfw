@@ -30,6 +30,13 @@
 
         <li><%= link_to (content_tag(:span, t('header.nav.' + option ))), path, :class => option_class, :target => option == 'blog' ? '_blank' : '' %></li>
       <% end %>
+      <li class="search">
+          <button id="btn-search" class="btn-search">Search</button>
+          <div id="search-box" class="search-box">
+              <input id="search" type="text" placeholder="Type your search"/> 
+              <span id="btn-close-search">X</span>
+          </div>
+      </li>
     </ul>
   <% end %>
 </nav>

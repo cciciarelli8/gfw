@@ -5,11 +5,12 @@
 //= require gfw/ui/sourcewindow
 //= require gfw/ui/carrousel
 //= require jquery.qtip.min
+//= require_tree ./search
 
 $(document).ready(function() {
 
   var ga = ga || function() {};
-
+  window.search_index = new gfw.ui.view.SearchIndex();
   gfw.ui.view.Terms = cdb.core.View.extend({
 
     el: 'body',

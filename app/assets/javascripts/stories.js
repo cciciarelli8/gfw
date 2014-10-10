@@ -12,6 +12,12 @@
 //= require gfw
 //= require gfw/helpers
 //= require gfw/ui/carrousel
+//= require_tree ./search
+
+$(document).ready(function(){
+  //SearchBox
+  window.search_index = new gfw.ui.view.SearchIndex();
+})
 
 gfw.ui.view.StoriesEdit = cdb.core.View.extend({
 

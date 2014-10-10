@@ -14,11 +14,14 @@
 //= require gfw/ui/umd_options
 
 //= require_tree ./countries
+//= require_tree ./search
 
 
 $(document).ready(function() {
 
   window.ga = window.ga || function() {};
+  //SearchBox
+  window.search_index = new gfw.ui.view.SearchIndex();
 
   cdb.init(function() {
     if ($('.is-index-action').length > 0) {

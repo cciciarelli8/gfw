@@ -17,15 +17,6 @@
 
 
 $(document).ready(function() {
-
-  window.ga = window.ga || function() {};
-
-  cdb.init(function() {
-
-    if ($('.is-index-action').length > 0) {
-      window.search_index = new gfw.ui.view.SearchIndex();
-    }
-
-  });
-
+  //SearchBox
+  window.search_index = new gfw.ui.view.SearchIndex();
 });

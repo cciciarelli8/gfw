@@ -4,7 +4,7 @@
   display: flex;
   display: -ms-flex;
   display: -webkit-flex;
-  width: 700px;
+  width: 725px;
   justify-content: space-between;
 
   #google_translate_element {
@@ -32,7 +32,76 @@
 
   li {
     float: left;
+    &.search{
+      position: relative;
+      .btn-search{
+        display: block;
+        width: 24px;
+        height: 24px;
+        text-indent: -999999px;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        background: image-url('countries/search.svg') no-repeat center;
+        background-size: contain;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
 
+      }
+      .search-box{
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        opacity: 0;
+        z-index: 1;
+        visibility: hidden;
+        @include transform(translate(100%,-50%));
+        @include transition(all,0.25s,ease-in-out);
+        &.is-visible{
+          opacity: 1;
+          visibility: visible;
+          @include transform(translate(0%,-50%));
+        }
+
+        input{
+          box-sizing: border-box;
+          display: block;
+          width: 255px;
+          padding: 10px;
+          margin: 0;
+          margin-right: 5px;
+          border-radius: 3px;
+          font-size: 12px;
+          background: #FFF;
+          color: $cGray2;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          min-height: 27px;
+          outline: none;
+          font-family: inherit;          
+        } 
+        span{
+          width: 20px;
+          height: 20px;
+          right: 10px;
+          line-height: 20px;
+          top: 50%;
+          text-align: center;
+          font-family: "fira_sans_otregular";
+          position: absolute;
+          display: block;
+          z-index: 2;
+          font-size: 12px;
+          cursor: pointer;
+          @include transform(translate(0,-50%));
+          &:hover{
+            color: #f00;
+          }
+        }
+
+      }
+    }
     a {
       display: block;
       height: 26px;
