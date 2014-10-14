@@ -889,9 +889,23 @@ blockquote {
     }
     .navigation_left {
       width: 100%;
-      .selected {
-        width: 100%;
-        box-sizing: border-box;
+      li {
+        a:after {
+          content: '◀';
+          width: 5px;
+          height: 5px;
+          position: absolute;
+          left: 90%;
+          font-size: 11px;
+        }
+        .selected {
+          width: 100%;
+          box-sizing: border-box;
+          &:after {
+            content: '▼';
+            font-size: 13px;
+          }
+        }
       }
     }
   }
