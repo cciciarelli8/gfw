@@ -866,7 +866,8 @@ blockquote {
     display: table-column;
   }
   .is-about-action,
-  .is-data-action, .is-howto-action {
+  .is-data-action,
+  .is-howto-action {
     .header_block {
       background: #444051;
     }
@@ -880,9 +881,18 @@ blockquote {
     }
     .header_block__body {
       padding: 30px 15px 0 15px;
+      .carrousel {
+        height: 384px;
+      }
       p {
         font-family: fira_sans_otlight, "Helvetica Neue", "Trebuchet MS", sans-serif;
       }
+      .slide {
+        overflow: visible;
+      }
+    }
+    .header_block__footer {
+      display: none;
     }
     .content_right {
       margin: 0;
@@ -895,6 +905,9 @@ blockquote {
     }
     .navigation_left {
       width: 100%;
+      .item_title {
+        display: none;
+      }
       li {
         a:after {
           content: '◀';
