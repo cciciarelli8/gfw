@@ -865,6 +865,7 @@ blockquote {
     left: -15px;
     display: table-column;
   }
+
   .is-about-action,
   .is-data-action,
   .is-howto-action {
@@ -880,7 +881,7 @@ blockquote {
       padding: 0;
     }
     .header_block__body {
-      padding: 30px 15px 0 15px;
+      padding: 30px 15px 10px 15px;
       .carrousel {
         height: 384px;
       }
@@ -909,13 +910,16 @@ blockquote {
         display: none;
       }
       li {
-        a:after {
-          content: '◀';
-          width: 5px;
-          height: 5px;
-          position: absolute;
-          left: 90%;
-          font-size: 11px;
+        a {
+          line-height: 37px;
+          &:after {
+            content: '◀';
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            left: 90%;
+            font-size: 11px;
+          }
         }
         .selected {
           width: 100%;
