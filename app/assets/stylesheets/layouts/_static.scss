@@ -636,12 +636,18 @@
     border-bottom-color: #F2F2F3;
     border-width: 12px;
     margin-left: -30px;
+    @media only screen and (max-width: 320px) {
+      margin-left: -10px;
+    }
   }
   .testimonial-quote:before {
     border-color: rgba(194, 225, 245, 0);
     border-bottom-color: #d7d7d7;
     border-width: 13px;
     margin-left: -31px;
+    @media only screen and (max-width: 320px) {
+      margin-left: -31px;
+    }
   }
 
 
