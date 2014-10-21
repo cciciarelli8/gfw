@@ -932,4 +932,20 @@ blockquote {
       }
     }
   }
+  .source_header {
+    strong {
+      line-height: 40px;
+      position: relative;
+    }
+    em {
+      float: none;
+      line-height: 15px;
+    }
+    .expand_arrow,
+    .expand_down {
+      position: relative;
+      top: -6px;
+      height: 40px;
+    }
+  }
 }
