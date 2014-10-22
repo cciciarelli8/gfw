@@ -16,12 +16,17 @@ body {
     color: #333;
   }
 
-  &.is-embed-action {
+  &.is-embed-action,
+  &.embed {
     max-width: 640px;
-    #tpglt-nav-wrapper {
+    background: none;
+    #tpglt-nav-wrapper,
+    .skiptranslate {
       display: none
     }
-    background: none;
+    .header-inner {
+      height: 0;
+    }
     h1 {
       font-size: 32px;
       display: inline-block;
