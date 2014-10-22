@@ -918,7 +918,7 @@ blockquote {
             height: 5px;
             position: absolute;
             left: 90%;
-            font-size: 11px;
+            font-size: 13px;
           }
         }
         .selected {
@@ -936,10 +936,20 @@ blockquote {
     strong {
       line-height: 40px;
       position: relative;
+      @media only screen and (max-width: 320px) {
+        max-width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+      }
     }
     em {
       float: none;
       line-height: 15px;
+      @media only screen and (max-width: 320px) {
+        display: none;
+      }
     }
     .expand_arrow,
     .expand_down {

@@ -332,7 +332,6 @@
     @include stories-icons-sprite(btn_remove);
   }
 }
-.show_mobile {display: none;}
 .thumbnail {
   position: relative;
   @include inline-block();

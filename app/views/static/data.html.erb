@@ -1,5 +1,5 @@
 <div class='inner'>
-  <div class='header_block'>
+  <div class='header_block' style="display: none;">
     <div class='header_block__body'>
       <h1 class='header_block__title'>Data sources</h1>
       <p class='header_block__description'>Global Forest Watch hosts a wealth of data relating to forests. Some data have been developed by WRI or by GFW partner organizations. Other data are in the public domain and have been developed by governments, NGOs, and companies. The data vary in accuracy, resolution, frequency of update, and geographic coverage. The summaries below include links to further information such as methods and technical documents.  Full download of the data sets is available for most sources.</p>
@@ -24,7 +24,7 @@
 <div class='inner'>
   <div class='static-inner'>
     <div class='navigation_left'>
-<!--       <ul>
+      <ul onclick="$(this).hide();$('.navigation_left span').toggle(); $('.header_block').toggle()" style="display:none;">
         <li><%= link_to 'Forest change', "#{sources_path}/forest_change", :"data-slug" => 'forest_change', :class => 'nav-item selected' %></li>
         <li><%= link_to 'Forest cover', "#{sources_path}/forest_cover", :"data-slug" => 'forest_cover', :class => 'nav-item' %></li>
         <li><%= link_to 'Forest use', "#{sources_path}/forest_use", :"data-slug" => 'forest_use', :class => 'nav-item' %></li>
@@ -37,8 +37,9 @@
         <li><%= link_to 'GFW on Google Earth Engine', "#{sources_path}/earth_engine", :"data-slug" => 'earth_engine', :class => 'nav-item' %></li>
         <li><%= link_to 'GFW on ArcGIS Online', "#{sources_path}/arcgis", :"data-slug" => 'arcgis', :class => 'nav-item' %></li>
         <li><%= link_to 'Data policy', "#{sources_path}/data_policy", :"data-slug" => 'data_policy', :class => 'nav-item' %></li>
-      </ul> -->
-      <select>
+      </ul>
+      <span onclick="$(this).hide();$('.navigation_left ul').toggle(); $('.header_block').toggle()" style="cursor:pointer;padding: 50px;float: left;">MENU</span>
+<!--       <select>
         <option><%= link_to 'Forest change', "#{sources_path}/forest_change", :"data-slug" => 'forest_change', :class => 'nav-item selected' %></option>
         <option><%= link_to 'Forest cover', "#{sources_path}/forest_cover", :"data-slug" => 'forest_cover', :class => 'nav-item selected' %></option>
         <option><%= link_to 'Forest use', "#{sources_path}/forest_use", :"data-slug" => 'forest_use', :class => 'nav-item selected' %></option>
@@ -51,7 +52,7 @@
         <option><%= link_to 'GFW on Google Earth Engine', "#{sources_path}/earth_engine", :"data-slug" => 'earth_engine', :class => 'nav-item selected' %></option>
         <option><%= link_to 'GFW on ArcGIS Online', "#{sources_path}/arcgis", :"data-slug" => 'arcgis', :class => 'nav-item selected' %></option>
         <option><%= link_to 'Data policy', "#{sources_path}/arcgis", :"data-slug" => 'arcgis', :class => 'nav-item selected' %></option>
-      </select>
+      </select> -->
     </div>
 
     <div class='content_right'>
