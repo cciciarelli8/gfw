@@ -82,12 +82,7 @@ define([
         this._analyzeWdpai(wdpaid.wdpaid);
       }
     }, {
-      'AnalysisTool/analyze-concession': function(useid, layerSlug, wdpaid) {
-        if (wdpaid && wdpaid != "") {
-          wdpaid = {wdpaid : wdpaid}
-          mps.publish('AnalysisTool/analyze-wdpaid', [wdpaid]);
-         return;
-        }
+      'AnalysisTool/analyze-concession': function(useid, layerSlug) {
         this.view._stopDrawing();
         this.deleteAnalysis();
         this._analyzeConcession(useid, layerSlug);
