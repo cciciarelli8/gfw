@@ -909,27 +909,36 @@ blockquote {
       .item_title {
         display: none;
       }
+      ul {
+        display: none;
+      }
       li {
         a {
           line-height: 37px;
           &:after {
-            content: '◀';
-            width: 5px;
-            height: 5px;
+            content: '►';
             position: absolute;
             left: 90%;
-            font-size: 13px;
+            font-size: 16px;
           }
         }
         .selected {
           width: 100%;
           box-sizing: border-box;
-          &:after {
-            content: '▼';
-            font-size: 13px;
-          }
+
         }
       }
+      .back_options {
+        cursor:pointer;
+        padding: 20px 16px;
+        float: left;
+        width: 100%;
+      }
+    }
+  }
+  .is-data-action {
+    .static-inner {
+      margin-top: 40px;
     }
   }
   .source_header {
