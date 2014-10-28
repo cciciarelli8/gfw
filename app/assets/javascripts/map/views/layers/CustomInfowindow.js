@@ -25,7 +25,24 @@ define([
     this.setMap(map);
   };
 
+
   CustomInfowindow.prototype = new google.maps.OverlayView();
+
+  CustomInfowindow.prototype.checkForestChangeLayer = function(){
+
+    var layers = this.map.overlayMapTypes.j;
+    var layersForest = ['loss','forestgain','forma','imazon','modis','fires'];
+    var analizeBtn = false;
+
+    _.each(layers, _.bind(function(v){
+      if (layersForest.indexOf(v.name) !== -1) {
+        analizeBtn = true;
+      }
+    }, this ));
+    return analizeBtn;
+  };
+
+
 
   CustomInfowindow.prototype.draw = function() {
     // Check if the div has been created.
@@ -39,6 +56,7 @@ define([
       div.style.position = 'absolute';
       div.style.width = this.options.width + 'px';
 
+      this.options.infowindowData.analysis = (this.options.infowindowData.analysis) ? this.checkForestChangeLayer() : false;
       div.innerHTML = this.options.infowindowContent || this.template({content: {data: this.options.infowindowData}});
 
       closeButton = $(div).find('.close')[0];
