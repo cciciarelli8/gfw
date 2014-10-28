@@ -319,6 +319,9 @@
       background: #FFF;
     }
   }
+  .back_options {
+    display: none;
+  }
 }
 
 
@@ -929,14 +932,17 @@ blockquote {
         }
       }
       .back_options {
+        display: inline-block;;
         cursor:pointer;
-        padding: 20px 16px;
+        padding-left: 16px;
+        line-height: 37px;
         float: left;
         width: 100%;
         box-sizing: border-box;
         font-family: fira_sans_otmedium;
         font-size: 14px;
         text-transform: uppercase;
+        border-bottom: 1px solid #ccc;
       }
     }
   }

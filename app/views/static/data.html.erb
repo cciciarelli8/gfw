@@ -24,7 +24,7 @@
 <div class='inner'>
   <div class='static-inner'>
     <div class='navigation_left'>
-      <ul onclick="$(this).hide();$('.navigation_left span').fadeToggle('fast'); $('.header_block').toggle(); $('.content_right').fadeToggle('fast')">
+      <ul onclick="if ($(window).width() < 769 ) {$(this).hide();$('.navigation_left span').fadeToggle('fast'); $('.header_block').toggle(); $('.content_right').fadeToggle('fast')}">
         <li><%= link_to 'Forest change', "#{sources_path}/forest_change", :"data-slug" => 'forest_change', :class => 'nav-item selected' %></li>
         <li><%= link_to 'Forest cover', "#{sources_path}/forest_cover", :"data-slug" => 'forest_cover', :class => 'nav-item' %></li>
         <li><%= link_to 'Forest use', "#{sources_path}/forest_use", :"data-slug" => 'forest_use', :class => 'nav-item' %></li>
