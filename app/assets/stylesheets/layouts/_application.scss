@@ -488,8 +488,9 @@
       display: none;
     }
     height: 60px;
-    background-image: url("/assets/logos/logo_mv.png");
+    background-image: url("/assets/logos/gfw.svg");
     width: 60px;
+    background-size: contain;
   }
 }
 @media only screen and (max-width: 640px){

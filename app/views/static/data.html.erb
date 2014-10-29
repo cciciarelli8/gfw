@@ -24,7 +24,7 @@
 <div class='inner'>
   <div class='static-inner'>
     <div class='navigation_left'>
-      <ul onclick="if ($(window).width() < 769 ) {$(this).hide();$('.navigation_left span').fadeToggle('fast'); $('.header_block').toggle(); $('.content_right').fadeToggle('fast');window.scrollTo(0,0)}">
+      <ul onclick="">
         <li><%= link_to 'Forest change', "#{sources_path}/forest_change", :"data-slug" => 'forest_change', :class => 'nav-item selected' %></li>
         <li><%= link_to 'Forest cover', "#{sources_path}/forest_cover", :"data-slug" => 'forest_cover', :class => 'nav-item' %></li>
         <li><%= link_to 'Forest use', "#{sources_path}/forest_use", :"data-slug" => 'forest_use', :class => 'nav-item' %></li>
@@ -38,7 +38,7 @@
         <li><%= link_to 'GFW on ArcGIS Online', "#{sources_path}/arcgis", :"data-slug" => 'arcgis', :class => 'nav-item' %></li>
         <li><%= link_to 'Data policy', "#{sources_path}/data_policy", :"data-slug" => 'data_policy', :class => 'nav-item' %></li>
       </ul>
-      <span class="back_options" onclick="$(this).hide();$('.navigation_left ul').fadeToggle('fast'); $('.header_block').toggle(); $('.content_right').fadeToggle('fast');$('html, body').scrollTop($('.navigation_left').offset().top)"><span>◀</span> Data sources</span>
+      <span class="back_options"><span>◀</span> Data sources</span>
     </div>
 
     <div class='content_right'>
@@ -46,3 +46,30 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  /****Mobile*****/
+
+    //cache
+    var navigation_left = document.getElementsByClassName('navigation_left')[0],
+        header_block = document.getElementsByClassName('header_block')[0],
+        content_right = document.getElementsByClassName('content_right')[0],
+        body_ = document.getElementsByTagName('BODY')[0],
+        ul_ = navigation_left.getElementsByTagName("UL")[0];
+
+    document.getElementsByClassName('back_options')[0].onclick = function() {
+      $(this).hide();
+      $(ul_).fadeToggle('fast');
+      $(header_block).toggle();
+      $(content_right).fadeToggle('fast');
+      $(body_).scrollTop($(navigation_left).offset().top);
+    }
+    ul_.onclick = function() {
+      if ($(window).width() < 768 ) {
+        $(this).hide();
+        $(navigation_left).find('span').fadeToggle('fast');
+        $(header_block).toggle();
+        $(content_right).fadeToggle('fast');
+        window.scrollTo(0,0)
+      }
+    }
+</script>
