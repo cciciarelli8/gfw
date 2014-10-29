@@ -37,6 +37,7 @@
         <li><%= link_to 'Web Platform FAQs', "#{howto_path}/web_platform", :"data-slug" => 'web_platform', :class => 'nav-item' %></li>
         <li><%= link_to 'GFW for businesses', "#{howto_path}/for_business", :"data-slug" => 'for_business', :class => 'nav-item' %></li>
       </ul>
+      <span class="back_options"><span>◀</span> How to</span>
     </div>
 
     <div class='content_right'>
@@ -278,3 +279,40 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  /****Mobile*****/
+
+  //cache
+  var navigation_left = document.getElementsByClassName('navigation_left')[0],
+      header_block = document.getElementsByClassName('header_block')[0],
+      content_right = document.getElementsByClassName('content_right')[0],
+      body_ = document.getElementsByTagName('BODY')[0],
+      back_options = document.getElementsByClassName('back_options')[0],
+      ul_ = navigation_left.getElementsByTagName("UL")[0];
+  if (window.innerWidth <= 768) {
+    back_options.onclick = function() {
+      $(this).hide();
+      $(ul_).fadeToggle('fast');
+      $(header_block).show();
+      $(content_right).fadeToggle('fast');
+      $(body_).scrollTop($(navigation_left).offset().top - 61);
+    }
+    ul_.onclick = function() {
+      $(this).hide();
+      $(navigation_left).find('span').fadeToggle('fast');
+      $(header_block).hide();
+      $(content_right).fadeToggle('fast');
+      window.scrollTo(0,0);
+    }
+  }
+  window.onresize = function(event) {
+    if (window.innerWidth > 768) {
+      $(back_options).hide();
+      $(ul_).show();
+      $(header_block).show();
+    } else {
+      $(back_options).show();
+      $(header_block).hide();
+    }
+  };
+</script>
