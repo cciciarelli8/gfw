@@ -1,5 +1,5 @@
 <div class='inner'>
-  <div class='header_block' style="display: none;">
+  <div class='header_block'>
     <div class='header_block__body'>
       <h1 class='header_block__title'>Data sources</h1>
       <p class='header_block__description'>Global Forest Watch hosts a wealth of data relating to forests. Some data have been developed by WRI or by GFW partner organizations. Other data are in the public domain and have been developed by governments, NGOs, and companies. The data vary in accuracy, resolution, frequency of update, and geographic coverage. The summaries below include links to further information such as methods and technical documents.  Full download of the data sets is available for most sources.</p>
@@ -24,7 +24,7 @@
 <div class='inner'>
   <div class='static-inner'>
     <div class='navigation_left'>
-      <ul onclick="">
+      <ul>
         <li><%= link_to 'Forest change', "#{sources_path}/forest_change", :"data-slug" => 'forest_change', :class => 'nav-item selected' %></li>
         <li><%= link_to 'Forest cover', "#{sources_path}/forest_cover", :"data-slug" => 'forest_cover', :class => 'nav-item' %></li>
         <li><%= link_to 'Forest use', "#{sources_path}/forest_use", :"data-slug" => 'forest_use', :class => 'nav-item' %></li>
@@ -60,14 +60,14 @@
     back_options.onclick = function() {
       $(this).hide();
       $(ul_).fadeToggle('fast');
-      $(header_block).toggle();
+      $(header_block).show();
       $(content_right).fadeToggle('fast');
       $(body_).scrollTop($(navigation_left).offset().top - 61);
     }
     ul_.onclick = function() {
       $(this).hide();
       $(navigation_left).find('span').fadeToggle('fast');
-      $(header_block).toggle();
+      $(header_block).hide();
       $(content_right).fadeToggle('fast');
       window.scrollTo(0,0);
     }
