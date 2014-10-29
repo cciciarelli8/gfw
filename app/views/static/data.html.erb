@@ -49,27 +49,27 @@
 <script type="text/javascript">
   /****Mobile*****/
 
-    //cache
-    var navigation_left = document.getElementsByClassName('navigation_left')[0],
-        header_block = document.getElementsByClassName('header_block')[0],
-        content_right = document.getElementsByClassName('content_right')[0],
-        body_ = document.getElementsByTagName('BODY')[0],
-        ul_ = navigation_left.getElementsByTagName("UL")[0];
+  //cache
+  var navigation_left = document.getElementsByClassName('navigation_left')[0],
+      header_block = document.getElementsByClassName('header_block')[0],
+      content_right = document.getElementsByClassName('content_right')[0],
+      body_ = document.getElementsByTagName('BODY')[0],
+      ul_ = navigation_left.getElementsByTagName("UL")[0];
 
-    document.getElementsByClassName('back_options')[0].onclick = function() {
+  document.getElementsByClassName('back_options')[0].onclick = function() {
+    $(this).hide();
+    $(ul_).fadeToggle('fast');
+    $(header_block).toggle();
+    $(content_right).fadeToggle('fast');
+    $(body_).scrollTop($(navigation_left).offset().top);
+  }
+  ul_.onclick = function() {
+    if ($(window).width() <= 768 ) {
       $(this).hide();
-      $(ul_).fadeToggle('fast');
+      $(navigation_left).find('span').fadeToggle('fast');
       $(header_block).toggle();
       $(content_right).fadeToggle('fast');
-      $(body_).scrollTop($(navigation_left).offset().top);
+      window.scrollTo(0,0)
     }
-    ul_.onclick = function() {
-      if ($(window).width() < 768 ) {
-        $(this).hide();
-        $(navigation_left).find('span').fadeToggle('fast');
-        $(header_block).toggle();
-        $(content_right).fadeToggle('fast');
-        window.scrollTo(0,0)
-      }
-    }
+  }
 </script>
