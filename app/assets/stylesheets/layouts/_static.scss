@@ -935,18 +935,23 @@ blockquote {
         position: fixed;
         top: 61px;
         background: rgb(242, 242, 243);
-        display: inline-block;;
-        cursor:pointer;
+        display: inline-block;
+        color: rgb(70, 64, 82);
+        cursor: pointer;
         padding-left: 16px;
         line-height: 37px;
         float: left;
         width: 100%;
         box-sizing: border-box;
         font-family: fira_sans_otmedium;
-        font-size: 16px;
+        font-size: 14px;
         text-transform: uppercase;
         border-bottom: 1px solid #ccc;
         z-index: 1;
+        span {
+          font-size: 16px;
+          display: inline-block !important;
+        }
       }
     }
   }

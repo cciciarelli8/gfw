@@ -24,7 +24,7 @@
 <div class='inner'>
   <div class='static-inner'>
     <div class='navigation_left'>
-      <ul onclick="if ($(window).width() < 769 ) {$(this).hide();$('.navigation_left span').fadeToggle('fast'); $('.header_block').toggle(); $('.content_right').fadeToggle('fast')}">
+      <ul onclick="if ($(window).width() < 769 ) {$(this).hide();$('.navigation_left span').fadeToggle('fast'); $('.header_block').toggle(); $('.content_right').fadeToggle('fast');window.scrollTo(0,0)}">
         <li><%= link_to 'Forest change', "#{sources_path}/forest_change", :"data-slug" => 'forest_change', :class => 'nav-item selected' %></li>
         <li><%= link_to 'Forest cover', "#{sources_path}/forest_cover", :"data-slug" => 'forest_cover', :class => 'nav-item' %></li>
         <li><%= link_to 'Forest use', "#{sources_path}/forest_use", :"data-slug" => 'forest_use', :class => 'nav-item' %></li>
@@ -38,7 +38,7 @@
         <li><%= link_to 'GFW on ArcGIS Online', "#{sources_path}/arcgis", :"data-slug" => 'arcgis', :class => 'nav-item' %></li>
         <li><%= link_to 'Data policy', "#{sources_path}/data_policy", :"data-slug" => 'data_policy', :class => 'nav-item' %></li>
       </ul>
-      <span class="back_options" onclick="$(this).hide();$('.navigation_left ul').fadeToggle('fast'); $('.header_block').toggle(); $('.content_right').fadeToggle('fast')">◀ Data sources</span>
+      <span class="back_options" onclick="$(this).hide();$('.navigation_left ul').fadeToggle('fast'); $('.header_block').toggle(); $('.content_right').fadeToggle('fast');$('html, body').scrollTop($('.navigation_left').offset().top)"><span>◀</span> Data sources</span>
     </div>
 
     <div class='content_right'>
