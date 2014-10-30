@@ -83,10 +83,22 @@
 @media only screen and (max-width: 768px) {
   .country {
     a {
+      padding: 28px;
+      &:hover {
+        padding: 28px;
+        margin: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .country {
+    a {
       padding: 6px;
       &:hover {
         padding: 6px;
-        margin: 0;
       }
     }
   }
@@ -96,14 +108,18 @@
     line-height: 60px;
   }
   .countries_list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
     .country {
       a {
         width: 100%;
         margin: 0;
         padding: 0;
-        z-index: 1;
       }
     }
   }
