@@ -79,3 +79,32 @@
     margin-left: -75px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .country {
+    a {
+      padding: 6px;
+      &:hover {
+        padding: 6px;
+        margin: 0;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 320px) {
+  .countries_block .header-title {
+    line-height: 60px;
+  }
+  .countries_list {
+    display: flex;
+    flex-direction: column;
+    .country {
+      a {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
