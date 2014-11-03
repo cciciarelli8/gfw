@@ -98,7 +98,7 @@
       float: left;
       display: inline-block;
       h3 {
-        font-family: "fira_sans_otlight", "Helvetica Neue", "Trebuchet MS", sans-serif;
+        font-family: "fira_sans_otregular", "Helvetica Neue", "Trebuchet MS", sans-serif;
       }
     }
   }
@@ -115,8 +115,16 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  .countries_block .header-title {
-    line-height: 60px;
+  .countries_block {
+    height: 80px;
+    padding: 10px;
+    background: url(/assets/backgrounds/bkg_countries_block_down.png) repeat-x;
+    box-sizing: border-box;
+    margin: 0;
+    .header-title {
+      line-height: 30px;
+      font-size: 20px;
+    }
   }
   .countries_list {
     display: -webkit-box;
@@ -131,7 +139,7 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        height: 160px;
+        height: 80px;
         &:hover {
           svg {
             top: 0;
@@ -147,14 +155,27 @@
           margin-left: 0;
           right: 0;
           padding: 7px;
+          display: table;
+          max-width: 60%;
+          height: 100%;
+          path {
+            transform: scale(0.4);
+            -webkit-transform: scale(0.4);
+          }
           h3 {
             font-size: 20px;
-            width: 50%;
             text-align: left;
             position: relative;
             left: -18px;
-            margin-top: 60px;
+            color: #333;
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
           }
+        }
+        svg {
+          left: 70%;
+          width: 115px;
         }
       }
     }
