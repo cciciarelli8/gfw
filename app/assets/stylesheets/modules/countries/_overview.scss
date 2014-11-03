@@ -849,3 +849,51 @@
       background-color: transparent;
     }
 }
+@media only screen and (max-width: 768px) {
+  .overview_graph__tabs {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        display: flex;
+        height: 101px;
+        width: 100%;
+        align-items: center;
+        .overview_graph__link {
+          height: auto;
+          border: 0;
+        }
+        &.selected {
+          background: rgba(0, 0, 0, 0.2);
+          a {
+            background: transparent;
+            &::after {
+              display: none;
+            }
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -3px;
+            border: 6px solid transparent;
+            border-top-color: #fff;
+          }
+        }
+        &.all_countries {
+          background: #95BC3B;
+        }
+        &:hover{
+          background: rgba(0, 0, 0, 0.3);
+          a {
+            background: transparent;
+          }
+        }
+      }
+    }
+    .overview_graph__link {
+      width: 100%;
+    }
+  }
+}
