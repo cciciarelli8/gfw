@@ -118,12 +118,14 @@
   .countries_block {
     height: 80px;
     padding: 10px;
-    background: url(/assets/backgrounds/bkg_countries_block_down.png) repeat-x;
+    background: transparent;
     box-sizing: border-box;
     margin: 0;
     .header-title {
+      text-align: left;
       line-height: 30px;
       font-size: 20px;
+      color: #333;
     }
   }
   .countries_list {
