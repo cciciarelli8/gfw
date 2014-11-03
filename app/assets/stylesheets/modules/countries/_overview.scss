@@ -853,12 +853,22 @@
   .overview_graph__tabs {
     ul {
       display: flex;
+      display: -ms-flexbox;
+      display: -ms-flex;
+      display: -webkit-flex;
       justify-content: space-between;
+      -ms-flex-pack: space-between;
+      -webkit-justify-content: space-between;
       li {
         display: flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: -webkit-flex;
         height: 101px;
         width: 100%;
         align-items: center;
+        -ms-falign-items: center;
+        -webkit-align-items: center;
         .overview_graph__link {
           height: auto;
           border: 0;
@@ -881,13 +891,18 @@
             border-top-color: #fff;
           }
         }
-        &.all_countries {
+        &.all_countries,
+        &:hover {
           background: #95BC3B;
-        }
-        &:hover{
-          background: rgba(0, 0, 0, 0.3);
-          a {
+          a, a:hover {
             background: transparent;
+            border-bottom: 0;
+          }
+        }
+        &:hover {
+          background: rgba(0, 0, 0, 0.3);
+          &.all_countries {
+            background: #95BC3B;
           }
         }
       }
@@ -895,5 +910,23 @@
     .overview_graph__link {
       width: 100%;
     }
+  }
+  .chart {
+    max-width: 768px;
+  }
+  #chart {
+    max-width: calc(768px + 40px);
+  }
+  .countries_list__title {
+    max-width: 350px;
+  }
+  .countries_list__minioverview.expanded {
+    width: 100px;
+  }
+  .countries_list__data {
+    width: 160px;
+  }
+  .sibling {
+    display: none;
   }
 }
