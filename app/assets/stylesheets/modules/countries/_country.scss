@@ -81,6 +81,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .countries_block .header-title {
+    font-family: "fira_sans_otlight", "Helvetica Neue", "Trebuchet MS", sans-serif;
+  }
+
   .country {
     a {
       padding: 28px;
@@ -88,6 +92,13 @@
         padding: 28px;
         margin: 0;
         z-index: 1;
+      }
+    }
+    .country-content, svg {
+      float: left;
+      display: inline-block;
+      h3 {
+        font-family: "fira_sans_otlight", "Helvetica Neue", "Trebuchet MS", sans-serif;
       }
     }
   }
@@ -103,7 +114,7 @@
     }
   }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .countries_block .header-title {
     line-height: 60px;
   }
@@ -120,6 +131,31 @@
         width: 100%;
         margin: 0;
         padding: 0;
+        height: 160px;
+        &:hover {
+          svg {
+            top: 0;
+          }
+          .country-content {
+            top: 0;
+            left: 20px;
+            right: 0;
+          }
+        }
+        .country-content, svg {
+          top: 0;
+          margin-left: 0;
+          right: 0;
+          padding: 7px;
+          h3 {
+            font-size: 20px;
+            width: 50%;
+            text-align: left;
+            position: relative;
+            left: -18px;
+            margin-top: 60px;
+          }
+        }
       }
     }
   }
