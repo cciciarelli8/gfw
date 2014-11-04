@@ -65,7 +65,7 @@
 }
 @media only screen and (max-width: 768px) {
   .mod-checkouts {
-    margin-top: 70px !important;
+    margin-top: calc(70px - 5%) !important;
     width: 10px;
   }
   .section.home_stories .columns {
@@ -77,8 +77,29 @@
     float: left;
     overflow-y: hidden;
     position: relative;
+    padding-top: 20px;
     .three {
       float: none;
+      .title{
+        strong {
+          font-family: "fira_sans_otlight", "Helvetica Neue", "Trebuchet MS", sans-serif;
+        }
+      }
+    }
+  }
+  .layout-home-actions {
+    .three {
+      width: 196px !important;
+      h3 {
+        font-family: "fira_sans_otlight", "Helvetica Neue", "Trebuchet MS", sans-serif;
+      }
+    }
+  }
+  .circle {
+    .circle-title,
+    .circle-description,
+    .circle-counter {
+      font-family: "fira_sans_otlight", "Helvetica Neue", "Trebuchet MS", sans-serif;
     }
   }
 }
@@ -98,7 +119,7 @@
       &.community,
       &.analysis_tool,
       &.submit_story {
-        width: auto;
+        width: auto !important;
         padding: 0 27px 80px 27px;;
         margin: 0;
       }
