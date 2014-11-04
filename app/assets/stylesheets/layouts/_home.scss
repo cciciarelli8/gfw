@@ -68,14 +68,70 @@
     margin-top: 70px !important;
     width: 10px;
   }
+  .section.home_stories .columns {
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    float: left;
+    overflow-y: hidden;
+    position: relative;
+    .three {
+      float: none;
+    }
+  }
 }
 @media only screen and (max-width: 640px) {
   .gfw_sticker {
     visibility: hidden;
     width: 80px !important;
+    padding-right: 0 !important;
     span {
       visibility: visible;
       text-align: center;
     }
+  }
+  .layout-content .columns {
+    padding: 0;
+    li {
+      &.community,
+      &.analysis_tool,
+      &.submit_story {
+        width: auto;
+        padding: 0 27px 80px 27px;;
+        margin: 0;
+      }
+      &.submit_story {
+        padding: 0 27px;
+        margin: 0;
+      }
+      .btn {
+        width: 100%;
+        border: 0;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        font-size: 14px;
+        letter-spacing: 1px;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        -webkit-align-content: center;
+        -webkit-justify-content: center;
+        left: 0;
+        position: absolute;
+        padding-top: 16px;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .feedback-link {
+    display: none;
   }
 }
