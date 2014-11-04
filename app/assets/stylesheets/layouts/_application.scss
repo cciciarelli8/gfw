@@ -358,7 +358,7 @@
       margin: 0;
       .header-title {
         font-size: 35px;
-        margin: 2em 0 .5em 0 !important;
+        margin: 2em 15px .5em 15px !important;
         text-align: left;
         max-width: 73% !important;
       }
@@ -481,13 +481,18 @@
           }
         }
         .footer-address {
-          margin: 10px 5px 0 5px;
+          margin: 10px 0px 0 5px;
+          padding-left: 15px;
           width: 100%;
+          box-sizing: border-box;
           display: inline;
           padding-top: 25px;
           text-align: left;
           a {
             display: inline-block;
+            &.footer-logo {
+              margin: 0;
+            }
           }
         }
       }
@@ -536,6 +541,9 @@
     }
     .brand.show {
       top: 288px;
+    }
+    .is-home-page .layout-header .header-title {
+      max-width: 100% !important;
     }
 }
 @media only screen and (max-width: 768px) and (min-width: 640px){

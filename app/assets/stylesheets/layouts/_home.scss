@@ -66,6 +66,7 @@
 @media only screen and (max-width: 768px) {
   .mod-checkouts {
     margin-top: calc(70px - 5%) !important;
+    margin-right: 10px;
     width: 10px;
   }
   .section.home_stories .columns {
@@ -104,13 +105,23 @@
   }
 }
 @media only screen and (max-width: 640px) {
-  .gfw_sticker {
-    visibility: hidden;
-    width: 80px !important;
-    padding-right: 0 !important;
-    span {
-      visibility: visible;
-      text-align: center;
+  .layout-header-bottom .mod-checkouts {
+    width: auto;
+    float: none;
+    margin-right: 0;
+    text-align: center;
+    margin: 0 10px 5px 10px;
+    .gfw_sticker {
+      width: 44%;
+      padding-right: 0;
+      margin-right: 0;
+      margin-top: 0;
+      margin-left: 0;
+      float: none;
+      display: inline-block;
+      span {
+        text-align: center;
+      }
     }
   }
   .layout-content .columns {
@@ -145,8 +156,7 @@
         justify-content: center;
         -webkit-align-content: center;
         -webkit-justify-content: center;
-        left: 0;
-        position: absolute;
+        position: relative;
         padding-top: 16px;
         box-sizing: border-box;
       }
