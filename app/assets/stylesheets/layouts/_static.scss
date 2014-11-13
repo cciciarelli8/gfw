@@ -911,10 +911,10 @@ blockquote {
     .navigation_left {
       width: 100%;
       .item_title {
-        display: none;
+        // display: none;
       }
       ul {
-        display: none;
+        // display: none;
       }
       li {
         a {
@@ -936,7 +936,7 @@ blockquote {
         position: fixed;
         top: 61px;
         background: rgb(242, 242, 243);
-        display: inline-block;
+        display: none;
         color: rgb(70, 64, 82);
         cursor: pointer;
         padding-left: 16px;
@@ -954,6 +954,9 @@ blockquote {
           display: inline-block !important;
         }
       }
+    }
+    .content_right {
+      display: none;
     }
   }
   .is-data-action {
