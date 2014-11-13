@@ -510,6 +510,23 @@
     width: 60px;
     background-size: contain;
   }
+
+  .terms_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cancel_btn {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+
+
+  #window.source_window {
+    $width: 75%;
+    margin-left: -1*$width/2;
+    width: $width;
+  }
 }
 @media only screen and (max-width: 640px){
   .mod-navbar {
