@@ -159,7 +159,10 @@
   }
 
   .countries-rankings.btn-rdn {
-    padding: 10px;
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0 20px;
     display: block;
   }
 
@@ -244,6 +247,10 @@
 
   .section .section-title {
     font-size: 28px;
+  }
+
+  .countries_list {
+    margin-bottom: 0;
   }
 
   .country-interesting-links {

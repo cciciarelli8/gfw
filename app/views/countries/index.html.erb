@@ -1,5 +1,8 @@
 <% content_for :header do %>
   <h1 class="header-title big"><%=t 'countries.index.title' %></h1>
+  <a href="<%= countries_overview_path %>" title="Explore worldwide data in the global overview" class="btn-rdn countries-rankings">
+    Country Rankings
+  </a>
 <% end %>
 
 <% content_for :js do %>
