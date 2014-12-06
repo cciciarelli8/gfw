@@ -114,20 +114,29 @@
     }
   }
 }
+
 @media only screen and (max-width: 480px) {
-  .countries_block {
-    height: 80px;
+  .layout-content {
+    overflow: auto;
+  }
+
+  .countries-rankings.btn-rdn {
     padding: 10px;
+    display: block;
+  }
+
+  .countries_block {
     background: transparent;
     box-sizing: border-box;
     margin: 0;
-    .header-title {
-      text-align: left;
-      line-height: 30px;
-      font-size: 20px;
-      color: #333;
-    }
+    height: auto;
   }
+
+  .search-countries-box {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
   .countries_list {
     display: -webkit-box;
     display: -moz-box;
@@ -136,12 +145,18 @@
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
+
     .country {
+      &:first-of-type a {
+        border-top: 0;
+      }
+
       a {
         width: 100%;
         margin: 0;
         padding: 0;
         height: 80px;
+
         &:hover {
           svg {
             top: 0;
@@ -152,11 +167,11 @@
             right: 0;
           }
         }
+
         .country-content, svg {
           top: 0;
-          margin-left: 0;
+          margin-left: 20px;
           right: 0;
-          padding: 7px;
           display: table;
           max-width: 60%;
           height: 100%;
@@ -175,9 +190,11 @@
             height: 100%;
           }
         }
+
         svg {
-          left: 70%;
-          width: 115px;
+          margin-top: 10px;
+          left: 68%;
+          width: 84px;
         }
       }
     }
