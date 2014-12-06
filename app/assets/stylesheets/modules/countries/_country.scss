@@ -80,6 +80,44 @@
   }
 }
 
+.country-interesting-links {
+  margin: 40px 0;
+  height: 125px;
+
+  li:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  li {
+    color: #8A8A8A;
+    width: 29%;
+    padding: 20px;
+    border-right: 1px solid #E4E4E4;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    font-size: 16px;
+    line-height: 28px;
+    float: left;
+    height: 124px;
+
+    &:last-child { border-right: none; }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: #424242;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .btn-rdn {
+    text-transform: uppercase;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .countries_block .header-title {
     font-family: "fira_sans_otlight", "Helvetica Neue", "Trebuchet MS", sans-serif;
@@ -197,6 +235,25 @@
           width: 84px;
         }
       }
+    }
+  }
+
+  .layout-content .section {
+    padding-bottom: 0;
+  }
+
+  .section .section-title {
+    font-size: 28px;
+  }
+
+  .country-interesting-links {
+    height: auto;
+
+    li {
+      width: auto;
+      border-right: 0;
+      border-bottom: 1px solid #E4E4E4;
+      float: none;
     }
   }
 }

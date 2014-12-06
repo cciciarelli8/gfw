@@ -61,6 +61,15 @@
     padding: 40px 0;
     text-align: center;
 
+    &.section_grey {
+      background-color: #F7F7F7;
+
+      .section-title {
+        font-weight: normal;
+        color: #98BE3A;
+      }
+    }
+
     &.section_dark {
       background: #222;
 
@@ -83,6 +92,7 @@
         font-weight: bold;
       }
     }
+
     &.home_stories{
       .columns{
         height: calc(346px - (40px * 2));
