@@ -333,7 +333,7 @@
       }
       label {
         float: left;
-        color: #333;
+        color: $dark;
         font-weight: bold;
         font-size: 12px;
         text-transform: uppercase;
@@ -375,19 +375,35 @@
         }
       }
       .video-list{
-        padding: 20px 0 0;
+        @include row(space-between,scretch);
+        @include flex-wrap(wrap);
         li{
-          margin-top: 10px;
+          @include col(32.3333);
+          margin: 1.5% 0 0;
+          font-size: 12px;
+          padding: 15px 10px;
+          text-align: center;
+          text-transform: uppercase;
+          background: $light;
+          color: $dark;
           cursor: pointer;
-          &:first-child{
-            margin-top: 0;
-          }
+          font-weight: 400;
 
           &.current, &:hover{
-            color: $cGreen;
+            background: $cGreen;
+            color: $white;
           }
         }
       }
+    }
+    // video grid
+    .video-grid{
+      @include row();
+      @include flex-wrap(wrap);     
+      > *{
+        margin: 1.5% 0 0;
+        @include col(49);
+      }   
     }
     // LIST TYPES
     .publications-list {
@@ -873,7 +889,7 @@
 .applications-section {
   h2 {
     font-size: 35px;
-    color: #555555;
+    color: $dark;
     padding: 40px 0;
     text-align: center;
     &:first-child {
@@ -1109,7 +1125,7 @@
   .source_category_title {
     margin-bottom: 10px;
     font-size: 37px;
-    color: #464052;
+    color: $dark;
   }
 
   .source_category_description {
@@ -1132,7 +1148,7 @@
     &:hover,
     &.selected {
       .source_header {
-        color: #98BD17;
+        color: $dark;
       }
     }
 
@@ -1141,7 +1157,7 @@
     }
 
     &.disabled:hover .source_header {
-      color: #464052;
+      color: $dark;
     }
 
     &.expanded {
@@ -1154,7 +1170,7 @@
       }
 
       .source_header {
-        color: #98BD17;
+        color: $dark;
       }
 
       .source_coverage,
@@ -1238,7 +1254,7 @@
   .single-source-item {
     font-size: 15px;
     line-height: 1.4;
-    color: #666;
+    color: $dark;
 
     p {
       font-size: 14px;
@@ -1315,7 +1331,7 @@
       font: 14px/30px "Fira Sans";
       font-weight: 500;
       text-decoration: none;
-      color: #fff;
+      color: $white;
       background: #A5B81A;
       @include border-radius(16px);
     }
@@ -1327,7 +1343,7 @@
       font: 14px/30px "Fira Sans";
       font-weight: 500;
       text-decoration: none;
-      color: #fff;
+      color: $white;
       background: #A5B81A;
       @include border-radius(16px);
 
@@ -1340,7 +1356,7 @@
 
   .source_header {
     border-top: 1px solid #ccc;
-    color: #464052;
+    color: $dark;
     cursor: pointer;
 
     strong {
@@ -1432,7 +1448,7 @@
     margin: 30px 0 10px;
     font: 21px/1.1 "Fira Sans";
     font-weight: 500;
-    color: #463F52;
+    color: $dark;
   }
 
   .source_dropdown {
@@ -1567,7 +1583,7 @@
   @include align-items(center);
   h1 {
     font-size: 39px;
-    color: #555;
+    color: $dark;
   }
   p {
     display: block;
